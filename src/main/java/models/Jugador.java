@@ -1,5 +1,8 @@
 package models;
 
+import com.diogonunes.jcolor.Ansi;
+import com.diogonunes.jcolor.Attribute;
+
 public class Jugador {
     private int mana;
     private Mazo mazo;
@@ -13,7 +16,8 @@ public class Jugador {
     Carta carta = mazo.getCartaTop();
 
     carta.jugarCarta();
-    if(carta instanceof Tierra)
+    if(carta instanceof Tierra) {
         mana++;
-    }
+        System.out.println(Ansi.colorize("Mana incrementado. Maná actual: "+mana, Attribute.RED_BACK()));
+    }   }
 }

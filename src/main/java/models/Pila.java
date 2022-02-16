@@ -3,8 +3,9 @@ package models;
 import interfaces.IPila;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 
-public class Pila<T> extends ArrayList<T> implements IPila<T> {
+public class Pila<T> extends LinkedList<T> implements IPila<T> {
 
     @Override
     public void push(T elem) {
@@ -13,7 +14,9 @@ public class Pila<T> extends ArrayList<T> implements IPila<T> {
 
     @Override
     public T pop() {
-        return remove(0);
+        T t = getFirst();
+        removeFirst();
+        return t;
     }
 
     @Override
@@ -23,7 +26,7 @@ public class Pila<T> extends ArrayList<T> implements IPila<T> {
 
     @Override
     public T cima() {
-        return this.get(0);
+        return this.getFirst();
     }
 
     @Override
