@@ -18,7 +18,6 @@ public class Pila<T> extends LinkedList<T> implements IPila<T> {
         removeFirst();
         return t;
     }
-
     @Override
     public int sizePila() {
         return this.size();
@@ -38,6 +37,5 @@ public class Pila<T> extends LinkedList<T> implements IPila<T> {
     public void copiaPila(T destino) {
 
     }
-
 
 }

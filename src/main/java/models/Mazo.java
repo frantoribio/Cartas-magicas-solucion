@@ -21,6 +21,7 @@ public class Mazo {
         }
     }
 
+
     public Carta getCartaTop() {
         return mazo.pop();
     }
